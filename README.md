@@ -1,46 +1,44 @@
-# Getting Started with Create React App
+Проект личного блога.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Страницы:
+    Главная
+    Статья
+    Новая статья
+    Авторизация
+    Регистрация
+    Пользователи
+    Страница с ошибкой о том, что страница по заданному адресу не существует
+    Страница с ошибкой о том, что у пользователя нет доступа к заданной странице
 
-## Available Scripts
 
-In the project directory, you can run:
+Пояснения:
+    Всего у пользователя может быть 4 роли: Администратор, Модератор, Читатель, Гость.
+    Роль Гость для неавторизованного пользователя, недоступна для назначения.
+    Если какая-то страница не доступна для пользователя, то она не должна открыться при переходе по прямой ссылке. В таком случае должна открыться страница с ошибкой о том, что доступ запрещен.
+    Картинки для статей — удаленные адреса из интернета (https://picsum.photos/).
+    Футер не может быть выше, чем в самом низу экрана браузера (не должно быть никакого пространства между футером и нижней границей окна браузера).
+    Тематика блога и дизайн на усмотрение разработчика.
 
-### `npm start`
+Технические требования:
+    Проект на базе Create React App.
+    CSS: Styled Components.
+    Верстка только под Desktop.
+    Формы с валидацией: React Hook Form и Yup.
+    Сетевые запросы: JSON Server.
+    Роутинг: React Router.
+    Менеджер состояния: Redux, Redux Thunk, React Redux, разбивка на под-состояния и несколько редьюсеров.
+    Допускается обоснованное использование npm-пакетов на усмотрение разработчика.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Дополнительно:
+    Футер должен содержать:
+        Название блога.
+        Всегда текущий год.
+        Контакты для вопросов и предложений.
+        Виджет текущей погоды в вашем городе.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+    Требования к виджету погоды:
+        Должно отображаться как минимум название города, текущая температура и наличие осадков.
+        Дизайн информации о текущей погоде на усмотрение разработчика.
+        Данные о погоде получать с помощью API Яндекс.Погода, инструкция: https://yandex.ru/dev/weather/doc/dg/concepts/about.html#about__onboarding
+        API Яндекс.Погоды должно запрашиваться только 1 раз, при первом открытии приложения. При переходах на разные страницы приложения запросов к API быть не должно.
+        Использовать бесплатный тариф «Погода на вашем сайте».
