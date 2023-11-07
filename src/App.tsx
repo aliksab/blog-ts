@@ -1,15 +1,26 @@
-import styled from "styled-components"
+import styled from "styled-components";
+import routes from "./routes";
+import Header from "./components/Header";
+import { useLocation, useRoutes} from "react-router-dom"
+import Footer from "./components/Footer";
 
-const Div = styled.div`
-    text-align: center
-`
+const Blog = styled.div`
+    width: 100vw;
+    height: 100vh;
+    background-color: #f9f4ec;
+`;
+
 
 function App() {
+    const location = useLocation();
+    const isLoggedIn = true;
+    const elements = useRoutes(routes(isLoggedIn, location));
     return (
-        <Div>
-            <i className="fa fa-camera-retro"></i>
-            <div>123</div>
-        </Div>
+        <Blog>
+            <Header />
+            {elements}
+            <Footer />
+        </Blog>
     );
 }
 
