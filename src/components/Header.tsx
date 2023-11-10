@@ -211,6 +211,7 @@ const Header = () => {
         }
     ];
     const isAdmin = false;
+    const isLoggedIn = false;
     return (
         <HeaderContent>
             <Logo>
@@ -247,9 +248,21 @@ const Header = () => {
                     />
                     <Slider />
                 </ModeSwitcher>
-                <Circle>
-                    <i className="fa fa-sign-out" aria-hidden="true"></i>
-                </Circle>
+                {isLoggedIn ? (
+                    <>
+                        <p>Your Login</p>
+                        <Circle>
+                            <i className="fa fa-sign-out" aria-hidden="true"></i>
+                        </Circle> 
+                    </>
+                ) : (
+                    <Link to={'/login'}>
+                        <Circle>
+                           Вход 
+                        </Circle>
+                    </Link>
+                )
+                }
             </ButtomMenu>
         </HeaderContent>
     );
