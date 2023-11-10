@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 const Blog = styled.div`
     width: 100vw;
     height: 100vh;
-    background-color: #f9f4ec;
+    
 `;
 
 
