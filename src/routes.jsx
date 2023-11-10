@@ -20,10 +20,12 @@ const routes = (isLoggedIn, location) => [
     {
         path: "login",
         element: <Authorization />,
-    },
-    {
-        path: "register",
-        element: <Register />,
+        children: [
+            {
+                path: "register",
+                element: <Register />
+            }
+        ]
     },
     {
         path: "users",
