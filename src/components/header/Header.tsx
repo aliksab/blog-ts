@@ -56,7 +56,7 @@ const Header = () => {
     }, [theme]);
 
     const isAdmin = false;
-    const isLoggedIn = true;
+    const isLoggedIn = false;
     return (
         <HeaderContent>
             <LogoContainer/>

@@ -1,6 +1,6 @@
 import { Navigate } from "react-router-dom";
 import MainPage from "./pages/MainPage";
-import Login from "./pages/Login";
+import {Authorization} from "./pages/Authorization";
 import PostPage from "./pages/PostPage";
 import Register from "./pages/Register";
 import Users from "./pages/Users";
@@ -19,7 +19,7 @@ const routes = (isLoggedIn, location) => [
     },
     {
         path: "login",
-        element: <Login />,
+        element: <Authorization />,
     },
     {
         path: "register",
