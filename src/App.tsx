@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import routes from "./routes";
-import Header from "./components/Header";
+import Header from "./components/header/Header";
 import { useLocation, useRoutes} from "react-router-dom"
 import Footer from "./components/Footer";
 
 const Blog = styled.div`
-    width: 100vw;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
     
 `;
 
